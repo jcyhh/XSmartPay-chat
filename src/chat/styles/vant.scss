@@ -1,0 +1,9 @@
+// 气泡弹窗的背景色
+.van-popover--dark .van-popover__content{
+    background-color: $chat-card-bg !important;
+}
+
+// 索引列表的索引字符
+.van-index-anchor{
+    color: #FFFFFF !important;
+}

@@ -1,0 +1,175 @@
+$chat-page-bg: #040404 ; // 页面背景
+
+$chat-nav-bg: #0E0E0E; // 二级页面导航条背景
+
+$chat-card-bg: #221F17; // 卡片背景
+
+$chat-card-box-bg: #FFFFFF1F; // 卡片内盒子背景
+
+$chat-btn-txt-color: #000000; // 主题色按钮的文字颜色
+
+$chat-bubble-bg: #FFFFFF; // 他人气泡颜色
+
+$chat-bubble-color: #000000; // 他人气泡字体颜色
+
+$chat-bubble-self-bg: #FFE5A5; // 自己气泡颜色
+ 
+$chat-bubble-self-color: #000000; // 自己气泡字体颜色
+
+$chat-bubble-gift-bg: #FF9305; // 红包颜色
+
+$chat-bubble-gift-disable-bg: #FFE1B9; // 红包领完后的颜色
+
+$chat-bubble-gift-color: #FFFFFF; // 红包内字体色
+
+$chat-card-line: #333333; // 卡片内分割线
+
+$chat-text-color: #FFFFFF; // 默认字体色
+
+$chat-gray: #999999; // 浅色
+
+$chat-grey: #666666; // 灰色
+
+$chat-red: #FF5F57; // 红色
+
+$chat-color: #ECC832; // 主题字体色
+
+$placeholder-color: #666666; // 表单占位字体色
+
+html{
+    background-color: $chat-page-bg;
+    color: $chat-text-color;
+    -webkit-user-select: none;
+    user-select: none;
+}
+
+input{
+    &::placeholder{
+        color: $placeholder-color;
+    }
+}
+
+.chatCardBg{
+    background-color: $chat-card-bg;
+}
+
+.chatBlack{
+    color: $chat-text-color;
+}
+.chatGray{
+    color: $chat-gray;
+}
+.chatGrey{
+    color: $chat-grey;
+}
+.chatRed{
+    color: $chat-red;
+}
+.chatBgRed{
+    background-color: $chat-red;
+}
+.chatColor{
+    color: $chat-color;
+}
+.chatTextColor{
+    color: $chat-text-color;
+}
+.chatLinear{
+    background: $chat-color;
+    color: $chat-btn-txt-color;
+}
+.chatBtn{
+    width: 100%;
+    height: 84px;
+    border-radius: 20px;
+    font-size: 28px;
+}
+.chatCard{
+    padding: 30px;
+    background-color: $chat-card-bg;
+    border-radius: 20px;
+}
+.chatRowLine{
+    width: 100%;
+    height: 1PX;
+    background-color: $chat-card-line;
+}
+.chatColLine{
+    width: 1PX;
+    height: 100%;
+    background-color: $chat-card-line;
+}
+
+// 重复样式
+.chatAvatar{
+    width: 76px;
+    height: 76px;
+    border-radius: 50%;
+}
+.chatText{
+    line-height: 45px;
+    img{
+        width: 35px;
+    }
+}
+.chatCard{
+    padding: 30px;
+    border-radius: 20px;
+    background-color: $chat-card-bg;
+}
+.chatBubble{
+    max-width: 55vw;
+    min-height: 76px;
+    padding: 20px;
+    background-color: $chat-bubble-bg;
+    color: $chat-bubble-color;
+    border-radius: 10px;
+    position: relative;
+    .chatBubbleRect{
+        width: 25px;
+        height: 25px;
+        background-color: $chat-bubble-bg;
+        transform: rotate(45deg);
+        position: absolute;
+        left: -10px;
+        top: 26px;
+    }
+}
+.chatSelfBubble{
+    max-width: 55vw;
+    min-height: 76px;
+    padding: 20px;
+    background-color: $chat-bubble-self-bg;
+    color: $chat-bubble-self-color;
+    border-radius: 10px;
+    position: relative;
+    .chatSelfBubbleRect{
+        width: 25px;
+        height: 25px;
+        background-color: $chat-bubble-self-bg;
+        transform: rotate(45deg);
+        position: absolute;
+        right: -10px;
+        top: 26px;
+    }
+}
+.chatPop{
+    width: 630px;
+    padding-top: 60px;
+    background-color: $chat-card-bg;
+    border-radius: 20px;
+    .popavatar{
+        width: 116px;
+        height: 116px;
+        border-radius: 50%;
+    }
+    .inpbox{
+        width: 100%;
+        height: 80px;
+        background-color: $chat-card-box-bg;
+        border-radius: 40px;
+    }
+    .chatPopbtn{
+        height: 86px;
+    }
+}

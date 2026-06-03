@@ -1,0 +1,12 @@
+export { default as ChatBotbar } from './ChatBotbar.vue'; // 底部操作条
+export { default as ChatText } from './ChatText.vue'; // 文字消息
+export { default as ChatVoice } from './ChatVoice.vue'; // 语音消息
+export { default as ChatImage } from './ChatImage.vue'; // 图片消息
+export { default as ChatVideo } from './ChatVideo.vue'; // 视频消息
+export { default as ChatGift } from './ChatGift.vue'; // 红包消息
+export { default as NoticeGift } from './NoticeGift.vue'; // 红包领取通知
+export { default as NoticeRevoke } from './NoticeRevoke.vue'; // 撤回
+export { default as NoticeChange } from './NoticeChange.vue'; // 群成员变动通知
+export { default as GiftPopup } from './GiftPopup.vue'; // 红包弹窗
+export { default as ChatMark } from './ChatMark.vue'; // @
+export { default as ChatSheet } from './ChatSheet.vue'; // @
