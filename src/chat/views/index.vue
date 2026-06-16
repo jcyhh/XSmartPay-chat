@@ -52,7 +52,7 @@
 
                 <van-swipe-cell v-for="(item, index) in list" :key="item.id">
                     <div class="flex jb ac pl30 pr30" :class="item.topped_at&&item.topped_at==='1970-01-01 08:00:00'?'top':''" @click="goChatPage(item)">
-                        <img v-lazy="item.avatar" class="chatListItemAvatar avatar mr20 flexS">
+                        <img src="@/chat/assets/avatar.png" class="chatListItemAvatar avatar mr20 flexS">
                         <div class="flex1 chatListItemRight flex col jc">
                             <div class="flex jb ac mb10">
                                 <div class="size30">{{ item.name }}</div>
