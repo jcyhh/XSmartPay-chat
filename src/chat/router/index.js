@@ -1,6 +1,10 @@
 export default [
     {
         path: '/', // 消息
+        component: () => import ('@/chat/views/check.vue')
+    },
+    {
+        path: '/sessions', // 消息
         component: () => import ('@/chat/views/index.vue')
     },
     {

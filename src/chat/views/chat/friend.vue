@@ -1,7 +1,7 @@
 <template>
     <div>
         <chat-nav :title="receiveInfo.nickname">
-            <van-icon name="ellipsis" size="30" @click="goReceiveHome" />
+            <!-- <van-icon name="ellipsis" size="30" @click="goReceiveHome" /> -->
         </chat-nav>
 
 

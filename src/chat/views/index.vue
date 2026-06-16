@@ -6,7 +6,8 @@
                 <van-icon name="arrow-left" :size="25" @click="back" />
             </div>
             <div class="flex1 size32 bold tc">{{ $t('消息') }}</div>
-            <div class="flex1 flex je ac">
+            <div class="flex1"></div>
+            <div class="flex1 flex je ac" v-if="false">
                 <!-- 好友列表 -->
                 <div class="img40 mr30 rel">
                     <img src="@/chat/assets/1.png" class="img40 block" @click="jump('/friends')">
@@ -113,7 +114,7 @@ export default {
     },
     mounted() {
         this.userId = getUserId()
-        this.loadData()
+        // this.loadData()
         this.loadList()
         // 监听新消息
         this.$bus.$on('talk', () => {
@@ -156,7 +157,7 @@ export default {
         // 删除会话
         delTalk(index){
             let id = this.list[index].id
-            this.$chatApi.del(`/api/chat/talk_sessions/${id}`).then(res=>{
+            this.$chatApi.del(`/api/chat/talk_sessions/${id}`).then(()=>{
                 this.list.splice(index, 1)
             }).catch(() => { })
         },
@@ -174,7 +175,9 @@ export default {
                 this.$router.push({
                     path:`/friend/${data.receiver_id}`,
                     query: {
-                        talkId: data.id
+                        talkId: data.id,
+                        name: data.name,
+                        avatar: data.avatar
                     }
                 })
             }else{

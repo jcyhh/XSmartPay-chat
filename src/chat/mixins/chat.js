@@ -105,10 +105,12 @@ export default {
         // 获取好友或群的信息
         loadReceiveInfo(){
             if(this.talk_type==1){
-                this.$chatApi.get(`/api/chat/friends/${this.$route.params.id}`).then(res => {
-                    this.receiveInfo.avatar = res.avatar
-                    this.receiveInfo.nickname = res.remark || res.nickname
-                }).catch(() => { })
+                this.receiveInfo.avatar = this.$route.query.avatar || ''
+                this.receiveInfo.nickname = this.$route.query.name || ''
+                // this.$chatApi.get(`/api/chat/friends/${this.$route.params.id}`).then(res => {
+                //     this.receiveInfo.avatar = res.avatar
+                //     this.receiveInfo.nickname = res.remark || res.nickname
+                // }).catch(() => { })
             }else{
                 this.receiveInfo.nickname = t('消息')
                 this.receiveInfo.is_silence = false

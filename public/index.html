@@ -23,7 +23,8 @@
         const hash = window.location.hash
         const queryString = hash.split('?')[1] || ''
         const params = Object.fromEntries(new URLSearchParams(queryString))
-
+        console.log(params);
+        
         const token = params.token
         const address = params.address
         const userId = params.userId
